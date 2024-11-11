@@ -1,0 +1,37 @@
+.header {
+    background-color: #2F3136;
+    z-index: 999;
+    border-bottom: 1px solid;
+    border-color: #2B2D32;
+    width: 100%;
+    top: 0;
+    padding: 10px 0;
+    color: #B9BBBE;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logout-button {
+      float: right;
+    }
+  
+    h2 {
+      width: 200px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .logout-button {
+      padding: 4px 10px 4px 10px;
+      background-color: #36393F;
+      color: #B9BBBE;
+      border-radius: 4px;
+      border-style: none
+    }
+    
+    .logout-button:hover {
+      background-color: #595E66;
+      cursor: pointer;
+    }
+}
