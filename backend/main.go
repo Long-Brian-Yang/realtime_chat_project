@@ -60,7 +60,7 @@ func GetColor() string {
 }
     
 func (c *ChatServer) SetupRoutes() {
-    fmt.Println("Distributed Chat App v0.01")
+    fmt.Println("Distributed Chat App v0.2")
     pool := websocket.NewPool(10, 10, 30)
     go pool.Start()
     http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
