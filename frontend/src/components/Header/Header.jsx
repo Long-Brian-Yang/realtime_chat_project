@@ -14,7 +14,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <h2>Long(Brian)Yang Chat</h2>
+        <h2>Yang Chat</h2>
         <button
           className="logout-button"
           onClick={() => {
