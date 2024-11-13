@@ -21,6 +21,7 @@ const(
 	Red       = "#E92750"   
 ) 
 
+// ServeWebSocket handles the websocket connection
 func (c *ChatServer) ServeWebSocket(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
     fmt.Println("WebSocket Endpoint Hit")
     conn, err := websocket.Upgrade(w, r)
@@ -53,12 +54,14 @@ func (c *ChatServer) ServeWebSocket(pool *websocket.Pool, w http.ResponseWriter,
     client.Read()
 }
 
+// GetColor returns a random color
 func GetColor() string {
 	var colorList = [3]string{Turquoise, Orange, Red};
 	rand.Seed(time.Now().Unix())
 	return colorList[rand.Intn(3)]
 }
-    
+
+// SetupRoutes sets up the routes for the chat server
 func (c *ChatServer) SetupRoutes() {
     fmt.Println("Distributed Chat App v0.2")
     pool := websocket.NewPool(10, 10, 30)
@@ -68,6 +71,7 @@ func (c *ChatServer) SetupRoutes() {
     })
 }
 
+// main function to boot up everything
 func main() {
     chatServer := ChatServer{ make([]websocket.MessageData, 0) }
 

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom';
-import ChatSocket from '../../../api/ChatSocket';
+import { Redirect } from "react-router-dom";
+import ChatSocket from "../../../api/ChatSocket";
 import "./ChatPage.scss";
 import ChatHistory from "../ChatHistory/ChatHistory";
 import ChatInput from "../ChatInput";
 import UserList from "../UserList";
-import auth from '../../../authorization/auth';
+import auth from "../../../authorization/auth";
 
+// ChatPage component is responsible for rendering the chat page
 class ChatPage extends Component {
-
   _chatSocket;
 
   constructor(props) {
@@ -16,27 +16,32 @@ class ChatPage extends Component {
     this.state = {
       isActive: false,
       chatHistory: [],
-      userList: []
-    }
+      userList: [],
+    };
   }
 
   handleShow = () => {
     this.setState({
-      isActive: true
+      isActive: true,
     });
   };
 
   handleHide = () => {
     this.setState({
-      isActive: false
+      isActive: false,
     });
   };
 
   componentDidMount() {
     if (auth.isAuthenticated()) {
-      this._chatSocket = new ChatSocket("ws://localhost:8080/ws", auth.getUserName(), auth.getUserId(), true)
+      this._chatSocket = new ChatSocket(
+        "ws://localhost:8080/ws",
+        auth.getUserName(),
+        auth.getUserId(),
+        true
+      );
       this._chatSocket.connect((event) => {
-        this.handleSocketEvent(event)
+        this.handleSocketEvent(event);
       });
     }
   }
@@ -49,10 +54,10 @@ class ChatPage extends Component {
     switch (event.type) {
       case "close":
         // TODO notify user about logout due to websocket closed
-        this.handleLogout()
+        this.handleLogout();
         break;
       case "message":
-        this.handleMessage(event)
+        this.handleMessage(event);
         break;
       default:
     }
@@ -60,28 +65,28 @@ class ChatPage extends Component {
 
   handleLogout() {
     auth.logout(() => {
-      this.props.history.push("/")
-    })
+      this.props.history.push("/");
+    });
   }
   handleMessage(event) {
     const msgData = JSON.parse(event.data);
-    switch(msgData.type) {
+    switch (msgData.type) {
       case 0:
         this.setState({
-          userList: msgData.clientList
+          userList: msgData.clientList,
         });
         break;
       case 1:
-        this.setState(prevState => ({
-          chatHistory: [...prevState.chatHistory, event]
-        }))
+        this.setState((prevState) => ({
+          chatHistory: [...prevState.chatHistory, event],
+        }));
         break;
       default:
     }
   }
 
   send(event) {
-    if(event.keyCode === 13 && event.target.value !== "") {
+    if (event.keyCode === 13 && event.target.value !== "") {
       this._chatSocket.sendMsg(event.target.value, auth.getUserId());
       event.target.value = "";
     }
@@ -89,19 +94,18 @@ class ChatPage extends Component {
 
   render() {
     if (!auth.isAuthenticated()) {
-      return <Redirect to='/' />
+      return <Redirect to="/" />;
     }
 
     return (
       <div className="ChatPage">
         <UserList userList={this.state.userList}></UserList>
-        
+
         <ChatHistory chatHistory={this.state.chatHistory} />
-        <ChatInput send={e => this.send(e)} />
+        <ChatInput send={(e) => this.send(e)} />
       </div>
     );
   }
 }
 
 export default ChatPage;
-

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./ChatHistory.scss"
 import Message from '../Message';
 
+// ChatHistory component is responsible for rendering the chat history
 class ChatHistory extends Component {
 
     componentDidMount() {
