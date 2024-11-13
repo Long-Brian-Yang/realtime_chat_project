@@ -1,123 +1,130 @@
-GoLang and ReactJS Chat Web Application
+# GoLang and ReactJS Chat Web Application
 
-Table of Contents
+## Table of Contents
 
-    •	Introduction
-    •	Features
-    •	Technologies Used
-    •	Demo
-    •	Getting Started
-    •	Prerequisites
-    •	Installation
-    •	Running the Application
-    •	Project Structure
-    •	Contributing
-    •	License
-    •	Contact
-    •	Acknowledgements
+- [GoLang and ReactJS Chat Web Application](#golang-and-reactjs-chat-web-application)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+    - [Frontend](#frontend)
+    - [Backend](#backend)
+    - [Other Tools](#other-tools)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Running the Application](#running-the-application)
+  - [Project Structure](#project-structure)
+  - [Acknowledgements](#acknowledgements)
 
-Introduction
+## Introduction
 
-Welcome to the GoLang and ReactJS Chat Web Application! This project is a real-time chat application that enables users to communicate seamlessly in a web-based chat room. Built with a robust backend powered by GoLang and a dynamic frontend using ReactJS, the application ensures efficient and safe concurrent communication using gorilla/websocket.
+Welcome to the **GoLang and ReactJS Chat Web Application**! This project is a real-time chat application that enables users to communicate seamlessly in a web-based chat room. Built with a robust backend powered by GoLang and a dynamic frontend using ReactJS, the application ensures efficient and safe concurrent communication using `gorilla/websocket`.
 
 Whether you’re looking to enhance your web development skills or seeking a foundation for your own chat application, this project offers a comprehensive example of integrating GoLang with ReactJS to create a responsive and reliable chat experience.
 
-Features
+## Features
 
-    •	Real-Time Text Chat: Instant messaging capabilities ensure conversations happen in real-time without noticeable delays.
-    •	User Authentication: Users can log into the chatroom with a unique username. User information is securely stored in the browser’s session data.
-    •	Connection Notifications: Members are notified when a user connects or disconnects, fostering a sense of community.
-    •	Scrollable Chat Feed: Easily navigate through past messages with a scrollable chat history, complete with timestamps for each message.
-    •	Responsive Design: The frontend is designed to be responsive, ensuring a seamless experience across various devices and screen sizes.
+- **Real-Time Text Chat:** Instant messaging capabilities ensure conversations happen in real-time without noticeable delays.
+- **User Authentication:** Users can log into the chatroom with a unique username. User information is securely stored in the browser’s session data.
+- **Connection Notifications:** Members are notified when a user connects or disconnects, fostering a sense of community.
+- **Scrollable Chat Feed:** Easily navigate through past messages with a scrollable chat history, complete with timestamps for each message.
+- **Responsive Design:** The frontend is designed to be responsive, ensuring a seamless experience across various devices and screen sizes.
 
-Technologies Used
+## Technologies Used
 
-Frontend
+### Frontend
 
-    •	ReactJS: A JavaScript library for building user interfaces.
-    •	SCSS: A preprocessor scripting language that is interpreted or compiled into CSS.
-    •	WebSockets: Enables real-time, full-duplex communication between the client and server.
+- **ReactJS:** A JavaScript library for building user interfaces.
+- **SCSS:** A preprocessor scripting language that is interpreted or compiled into CSS.
+- **WebSockets:** Enables real-time, full-duplex communication between the client and server.
 
-Backend
+### Backend
 
-    •	GoLang: A statically typed, compiled programming language designed for scalability and performance.
-    •	Gorilla/WebSocket: A Go implementation of the WebSocket protocol, facilitating real-time communication.
+- **GoLang:** A statically typed, compiled programming language designed for scalability and performance.
+- **Gorilla/WebSocket:** A Go implementation of the WebSocket protocol, facilitating real-time communication.
 
-Other Tools
+### Other Tools
 
-    •	Docker: For containerizing the backend server.
-    •	NPM/Yarn: Package managers for managing frontend dependencies.
-    •	GitHub Actions: For continuous integration and deployment workflows.
+- **Docker:** For containerizing the backend server.
+- **NPM/Yarn:** Package managers for managing frontend dependencies.
+- **GitHub Actions:** For continuous integration and deployment workflows.
 
-Demo
-
-Note: Replace the placeholder image with actual screenshots or a link to a live demo when available.
-
-Getting Started
+## Getting Started
 
 Follow these instructions to set up and run the project locally on your machine.
 
-Prerequisites
+### Prerequisites
 
 Ensure you have the following installed:
 
-    •	Go: Download and install Go
-    •	Node.js and npm: Download and install Node.js
-    •	Yarn: Install Yarn (optional, if you prefer using Yarn over npm)
-    •	Git: Download and install Git
+- **Go:** [Download and install Go](https://golang.org/dl/)
+- **Node.js and npm:** [Download and install Node.js](https://nodejs.org/)
+- **Yarn:** [Install Yarn](https://classic.yarnpkg.com/en/docs/install) (optional, if you prefer using Yarn over npm)
+- **Git:** [Download and install Git](https://git-scm.com/downloads)
 
-Installation
+### Installation
 
-    1.	Clone the Repository
+1. **Clone the Repository**
 
-git clone https://github.com/Long-Brian-Yang/realtime_chat_project.git
-cd realtime_chat_project
+   ```bash
+   git clone https://github.com/Long-Brian-Yang/realtime_chat_project.git
+   cd realtime_chat_project
+   ```
 
-    2.	Setup Backend
+2. **Setup Backend**
 
-Navigate to the backend directory and install dependencies.
+   Navigate to the `backend` directory and install dependencies.
 
-cd backend
-go mod download
+   ```bash
+   cd backend
+   go mod download
+   ```
 
-    3.	Setup Frontend
+3. **Setup Frontend**
 
-Open a new terminal window/tab, navigate to the frontend directory, and install dependencies.
+   Open a new terminal window/tab, navigate to the `frontend` directory, and install dependencies.
 
-cd frontend
-npm install
+   ```bash
+   cd frontend
+   npm install
 
-# or
+   # or
 
-yarn install
+   yarn install
+   ```
 
-Running the Application
+### Running the Application
 
-    1.	Start the Backend Server
+1. **Start the Backend Server**
 
-In the backend directory, run:
+   In the `backend` directory, run:
 
-go run main.go
+   ```bash
+   go run main.go
+   ```
 
-The backend server will start on http://localhost:8080.
+   The backend server will start on [http://localhost:8080](http://localhost:8080).
 
-    2.	Start the Frontend Application
+2. **Start the Frontend Application**
 
-In the frontend directory, run:
+   In the `frontend` directory, run:
 
-npm start
+   ```bash
+   npm start
 
-# or
+   # or
 
-yarn start
+   yarn start
+   ```
 
-The frontend application will start on http://localhost:3000.
+   The frontend application will start on [http://localhost:3000](http://localhost:3000).
 
-    3.	Access the Application
+3. **Access the Application**
 
-Open your browser and navigate to http://localhost:3000 to start using the chat application.
+   Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to start using the chat application.
 
-Project Structure
+## Project Structure
 
 realtime_chat_project
 ├── .gitignore
@@ -188,11 +195,15 @@ realtime_chat_project
 │ └── setupTests.js
 └── yarn.lock
 
-Acknowledgements
+## Acknowledgements
 
-    •	Gorilla WebSocket - For providing a robust WebSocket implementation in Go.
-    •	ReactJS - For the powerful and flexible frontend framework.
-    •	Create React App - For the development environment setup.
-    •	Docker - For containerizing the backend application.
+- [Gorilla WebSocket](https://github.com/gorilla/websocket) - For providing a robust WebSocket implementation in Go.
+- [ReactJS](https://reactjs.org/) - For the powerful and flexible frontend framework.
+- [Create React App](https://create-react-app.dev/) - For the development environment setup.
+- [Docker](https://www.docker.com/) - For containerizing the backend application.
 
-Happy Coding!
+---
+
+_Happy Coding!_
+
+---
