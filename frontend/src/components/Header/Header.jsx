@@ -3,6 +3,7 @@ import auth from "../../authorization/auth";
 import { withRouter } from "react-router-dom";
 import "./Header.scss";
 
+// Header component is responsible for rendering the header of the chat page
 class Header extends Component {
   handleLogout() {
     auth.logout(() => {

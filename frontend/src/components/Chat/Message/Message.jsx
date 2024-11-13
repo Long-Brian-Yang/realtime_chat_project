@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Message.scss";
 
+// Message component is responsible for rendering the chat message
 class Message extends Component {
 
   constructor(props) {
