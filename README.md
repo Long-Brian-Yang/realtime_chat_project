@@ -11,8 +11,6 @@
     - [Backend](#backend)
     - [Other Tools](#other-tools)
   - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
     - [Running the Application](#running-the-application)
   - [Project Structure](#project-structure)
   - [Acknowledgements](#acknowledgements)
@@ -20,8 +18,6 @@
 ## Introduction
 
 Welcome to the **GoLang and ReactJS Chat Web Application**! This project is a real-time chat application that enables users to communicate seamlessly in a web-based chat room. Built with a robust backend powered by GoLang and a dynamic frontend using ReactJS, the application ensures efficient and safe concurrent communication using `gorilla/websocket`.
-
-Whether you’re looking to enhance your web development skills or seeking a foundation for your own chat application, this project offers a comprehensive example of integrating GoLang with ReactJS to create a responsive and reliable chat experience.
 
 ## Features
 
@@ -51,19 +47,6 @@ Whether you’re looking to enhance your web development skills or seeking a fou
 - **GitHub Actions:** For continuous integration and deployment workflows.
 
 ## Getting Started
-
-Follow these instructions to set up and run the project locally on your machine.
-
-### Prerequisites
-
-Ensure you have the following installed:
-
-- **Go:** [Download and install Go](https://golang.org/dl/)
-- **Node.js and npm:** [Download and install Node.js](https://nodejs.org/)
-- **Yarn:** [Install Yarn](https://classic.yarnpkg.com/en/docs/install) (optional, if you prefer using Yarn over npm)
-- **Git:** [Download and install Git](https://git-scm.com/downloads)
-
-### Installation
 
 1. **Setup Backend**
 
