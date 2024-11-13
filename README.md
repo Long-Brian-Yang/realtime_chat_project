@@ -65,14 +65,7 @@ Ensure you have the following installed:
 
 ### Installation
 
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/Long-Brian-Yang/realtime_chat_project.git
-   cd realtime_chat_project
-   ```
-
-2. **Setup Backend**
+1. **Setup Backend**
 
    Navigate to the `backend` directory and install dependencies.
 
@@ -81,7 +74,7 @@ Ensure you have the following installed:
    go mod download
    ```
 
-3. **Setup Frontend**
+2. **Setup Frontend**
 
    Open a new terminal window/tab, navigate to the `frontend` directory, and install dependencies.
 
