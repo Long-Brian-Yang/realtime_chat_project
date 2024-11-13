@@ -1,6 +1,6 @@
 ## GoLang and ReactJS Chat Web Application
 
-A web development project to create a simple chat room experience in the browser using React w/ GoLang.
+A web development project to create a simple chat room experience in the browser using React / GoLang.
 The application can handle safe concurrent communication in Go with gorilla/websocket.
 
 ## Running Locally
