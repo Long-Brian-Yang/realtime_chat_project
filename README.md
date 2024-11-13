@@ -13,6 +13,7 @@
   - [Getting Started](#getting-started)
     - [Running the Application](#running-the-application)
   - [Project Structure](#project-structure)
+  - [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -171,16 +172,11 @@ realtime_chat_project
 │       └── setupTests.js
 └── yarn.lock
 
+```
+
 ## Acknowledgements
 
 - [Gorilla WebSocket](https://github.com/gorilla/websocket) - For providing a robust WebSocket implementation in Go.
 - [ReactJS](https://reactjs.org/) - For the powerful and flexible frontend framework.
 - [Create React App](https://create-react-app.dev/) - For the development environment setup.
 - [Docker](https://www.docker.com/) - For containerizing the backend application.
-
----
-
-_Happy Coding!_
-
----
-```
